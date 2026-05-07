@@ -216,3 +216,12 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Workshop additions
+.env
+.azure/
+appPackage/manifest.json
+appPackage/*.zip
+appPackage/color.png
+appPackage/outline.png
+*.log

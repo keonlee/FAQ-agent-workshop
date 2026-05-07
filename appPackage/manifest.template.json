@@ -1,0 +1,44 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.21/MicrosoftTeams.schema.json",
+  "manifestVersion": "1.21",
+  "version": "1.0.0",
+  "id": "<NEW_APP_GUID>",
+  "developer": {
+    "name": "Workshop",
+    "websiteUrl": "https://github.com/keonlee/FAQ-agent-workshop",
+    "privacyUrl": "https://github.com/keonlee/FAQ-agent-workshop/blob/main/README.md",
+    "termsOfUseUrl": "https://github.com/keonlee/FAQ-agent-workshop/blob/main/LICENSE"
+  },
+  "name": {
+    "short": "FAQ Agent",
+    "full": "Internal FAQ Agent"
+  },
+  "description": {
+    "short": "사내 FAQ 응답 에이전트",
+    "full": "사내 FAQ 데이터를 근거로 답변하는 Custom Engine Agent입니다. GitHub Copilot SDK + Microsoft 365 Agents SDK로 구성되었습니다."
+  },
+  "icons": {
+    "color": "color.png",
+    "outline": "outline.png"
+  },
+  "accentColor": "#0078D4",
+  "bots": [
+    {
+      "botId": "<BOT_CLIENT_ID>",
+      "scopes": ["personal"],
+      "supportsCalling": false,
+      "supportsVideo": false,
+      "isNotificationOnly": false
+    }
+  ],
+  "copilotAgents": {
+    "customEngineAgents": [
+      {
+        "id": "<BOT_CLIENT_ID>",
+        "type": "bot"
+      }
+    ]
+  },
+  "permissions": ["identity", "messageTeamMembers"],
+  "validDomains": []
+}
